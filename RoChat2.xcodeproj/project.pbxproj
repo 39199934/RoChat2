@@ -7,15 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD71491E2316C98200E87EB7 /* ChatMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */; };
+		FD71491F2316C98200E87EB7 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491C2316C98200E87EB7 /* ClientViewController.swift */; };
+		FD7149202316C98200E87EB7 /* ClientSendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491D2316C98200E87EB7 /* ClientSendCell.swift */; };
+		FDDD6417230FDD1C008BE66D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD6416230FDD1C008BE66D /* SettingViewController.swift */; };
+		FDDD6425231020EB008BE66D /* SettingLocalUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD6424231020EB008BE66D /* SettingLocalUserCell.swift */; };
+		FDDD642723103156008BE66D /* LocalUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD642623103156008BE66D /* LocalUserViewController.swift */; };
 		FDE73F22230D36F600B352A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F21230D36F600B352A3 /* AppDelegate.swift */; };
 		FDE73F24230D36F600B352A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F23230D36F600B352A3 /* ViewController.swift */; };
 		FDE73F27230D36F600B352A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE73F25230D36F600B352A3 /* Main.storyboard */; };
 		FDE73F2A230D36F600B352A3 /* RoChat2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F28230D36F600B352A3 /* RoChat2.xcdatamodeld */; };
 		FDE73F2C230D36F900B352A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE73F2B230D36F900B352A3 /* Assets.xcassets */; };
 		FDE73F2F230D36F900B352A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDE73F2D230D36F900B352A3 /* LaunchScreen.storyboard */; };
+		FDE73F38230D422000B352A3 /* SocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F37230D422000B352A3 /* SocketModel.swift */; };
+		FDE73F3A230D422D00B352A3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F39230D422D00B352A3 /* UserModel.swift */; };
+		FDE73F3C230D423400B352A3 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F3B230D423400B352A3 /* MessageModel.swift */; };
+		FDE73F3E230D423A00B352A3 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F3D230D423A00B352A3 /* ClientModel.swift */; };
+		FDE73F40230D424100B352A3 /* CommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F3F230D424100B352A3 /* CommandModel.swift */; };
+		FDE73F43230D426400B352A3 /* ClientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F42230D426400B352A3 /* ClientsModel.swift */; };
+		FDE73F46230D428100B352A3 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F45230D428100B352A3 /* SettingModel.swift */; };
+		FDE73F54230D437E00B352A3 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE73F4E230D435E00B352A3 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FDE73F56230E94D400B352A3 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73F55230E94D400B352A3 /* ClientsViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FDE73F4D230D435E00B352A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE73F47230D435E00B352A3 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6CD990101B77868C0011A685;
+			remoteInfo = "iOS CocoaAsyncSocket";
+		};
+		FDE73F4F230D435E00B352A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE73F47230D435E00B352A3 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9FC41F131B9D965000578BEB;
+			remoteInfo = "Mac CocoaAsyncSocket";
+		};
+		FDE73F51230D435E00B352A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDE73F47230D435E00B352A3 /* CocoaAsyncSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7D8B70C41BCFA15700D8E273;
+			remoteInfo = "tvOS CocoaAsyncSocket";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageViewCell.swift; sourceTree = "<group>"; };
+		FD71491C2316C98200E87EB7 /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
+		FD71491D2316C98200E87EB7 /* ClientSendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSendCell.swift; sourceTree = "<group>"; };
+		FDDD6416230FDD1C008BE66D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FDDD6424231020EB008BE66D /* SettingLocalUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLocalUserCell.swift; sourceTree = "<group>"; };
+		FDDD642623103156008BE66D /* LocalUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserViewController.swift; sourceTree = "<group>"; };
 		FDE73F1E230D36F600B352A3 /* RoChat2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoChat2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE73F21230D36F600B352A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDE73F23230D36F600B352A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +69,15 @@
 		FDE73F2B230D36F900B352A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE73F2E230D36F900B352A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDE73F30230D36F900B352A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDE73F37230D422000B352A3 /* SocketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketModel.swift; sourceTree = "<group>"; };
+		FDE73F39230D422D00B352A3 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FDE73F3B230D423400B352A3 /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		FDE73F3D230D423A00B352A3 /* ClientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		FDE73F3F230D424100B352A3 /* CommandModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandModel.swift; sourceTree = "<group>"; };
+		FDE73F42230D426400B352A3 /* ClientsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsModel.swift; sourceTree = "<group>"; };
+		FDE73F45230D428100B352A3 /* SettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		FDE73F47230D435E00B352A3 /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = "CocoaAsyncSocket-master/CocoaAsyncSocket.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		FDE73F55230E94D400B352A3 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +85,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE73F54230D437E00B352A3 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD71490C2314DF6B00E87EB7 /* MessageModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDE73F3B230D423400B352A3 /* MessageModel.swift */,
+			);
+			path = MessageModel;
+			sourceTree = "<group>";
+		};
+		FD7149162316C73800E87EB7 /* ClientMVC */ = {
+			isa = PBXGroup;
+			children = (
+				FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */,
+				FD71491D2316C98200E87EB7 /* ClientSendCell.swift */,
+				FD71491C2316C98200E87EB7 /* ClientViewController.swift */,
+				FDE73F3D230D423A00B352A3 /* ClientModel.swift */,
+			);
+			path = ClientMVC;
+			sourceTree = "<group>";
+		};
+		FDDD641F23101271008BE66D /* LocationUser */ = {
+			isa = PBXGroup;
+			children = (
+				FDDD642623103156008BE66D /* LocalUserViewController.swift */,
+			);
+			path = LocationUser;
+			sourceTree = "<group>";
+		};
 		FDE73F15230D36F600B352A3 = {
 			isa = PBXGroup;
 			children = (
 				FDE73F20230D36F600B352A3 /* RoChat2 */,
 				FDE73F1F230D36F600B352A3 /* Products */,
+				FDE73F53230D437E00B352A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +139,11 @@
 		FDE73F20230D36F600B352A3 /* RoChat2 */ = {
 			isa = PBXGroup;
 			children = (
+				FD7149162316C73800E87EB7 /* ClientMVC */,
+				FDE73F47230D435E00B352A3 /* CocoaAsyncSocket.xcodeproj */,
+				FDE73F44230D427000B352A3 /* SettingMVC */,
+				FDE73F41230D425600B352A3 /* ClientsMVC */,
+				FDE73F36230D420800B352A3 /* Models */,
 				FDE73F21230D36F600B352A3 /* AppDelegate.swift */,
 				FDE73F23230D36F600B352A3 /* ViewController.swift */,
 				FDE73F25230D36F600B352A3 /* Main.storyboard */,
@@ -65,6 +153,54 @@
 				FDE73F28230D36F600B352A3 /* RoChat2.xcdatamodeld */,
 			);
 			path = RoChat2;
+			sourceTree = "<group>";
+		};
+		FDE73F36230D420800B352A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD71490C2314DF6B00E87EB7 /* MessageModel */,
+				FDE73F37230D422000B352A3 /* SocketModel.swift */,
+				FDE73F3F230D424100B352A3 /* CommandModel.swift */,
+				FDE73F39230D422D00B352A3 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDE73F41230D425600B352A3 /* ClientsMVC */ = {
+			isa = PBXGroup;
+			children = (
+				FDE73F42230D426400B352A3 /* ClientsModel.swift */,
+				FDE73F55230E94D400B352A3 /* ClientsViewController.swift */,
+			);
+			path = ClientsMVC;
+			sourceTree = "<group>";
+		};
+		FDE73F44230D427000B352A3 /* SettingMVC */ = {
+			isa = PBXGroup;
+			children = (
+				FDDD6424231020EB008BE66D /* SettingLocalUserCell.swift */,
+				FDE73F45230D428100B352A3 /* SettingModel.swift */,
+				FDDD6416230FDD1C008BE66D /* SettingViewController.swift */,
+				FDDD641F23101271008BE66D /* LocationUser */,
+			);
+			path = SettingMVC;
+			sourceTree = "<group>";
+		};
+		FDE73F48230D435E00B352A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDE73F4E230D435E00B352A3 /* CocoaAsyncSocket.framework */,
+				FDE73F50230D435E00B352A3 /* CocoaAsyncSocket.framework */,
+				FDE73F52230D435E00B352A3 /* CocoaAsyncSocket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDE73F53230D437E00B352A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,12 +249,42 @@
 			mainGroup = FDE73F15230D36F600B352A3;
 			productRefGroup = FDE73F1F230D36F600B352A3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FDE73F48230D435E00B352A3 /* Products */;
+					ProjectRef = FDE73F47230D435E00B352A3 /* CocoaAsyncSocket.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FDE73F1D230D36F600B352A3 /* RoChat2 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FDE73F4E230D435E00B352A3 /* CocoaAsyncSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaAsyncSocket.framework;
+			remoteRef = FDE73F4D230D435E00B352A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE73F50230D435E00B352A3 /* CocoaAsyncSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaAsyncSocket.framework;
+			remoteRef = FDE73F4F230D435E00B352A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FDE73F52230D435E00B352A3 /* CocoaAsyncSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaAsyncSocket.framework;
+			remoteRef = FDE73F51230D435E00B352A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FDE73F1C230D36F600B352A3 /* Resources */ = {
@@ -139,8 +305,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDE73F2A230D36F600B352A3 /* RoChat2.xcdatamodeld in Sources */,
+				FDE73F43230D426400B352A3 /* ClientsModel.swift in Sources */,
+				FDE73F3E230D423A00B352A3 /* ClientModel.swift in Sources */,
+				FDDD6425231020EB008BE66D /* SettingLocalUserCell.swift in Sources */,
+				FDE73F3C230D423400B352A3 /* MessageModel.swift in Sources */,
+				FDE73F46230D428100B352A3 /* SettingModel.swift in Sources */,
 				FDE73F24230D36F600B352A3 /* ViewController.swift in Sources */,
+				FDDD642723103156008BE66D /* LocalUserViewController.swift in Sources */,
+				FDE73F38230D422000B352A3 /* SocketModel.swift in Sources */,
+				FDE73F56230E94D400B352A3 /* ClientsViewController.swift in Sources */,
+				FDE73F40230D424100B352A3 /* CommandModel.swift in Sources */,
+				FDE73F3A230D422D00B352A3 /* UserModel.swift in Sources */,
 				FDE73F22230D36F600B352A3 /* AppDelegate.swift in Sources */,
+				FDDD6417230FDD1C008BE66D /* SettingViewController.swift in Sources */,
+				FD7149202316C98200E87EB7 /* ClientSendCell.swift in Sources */,
+				FD71491F2316C98200E87EB7 /* ClientViewController.swift in Sources */,
+				FD71491E2316C98200E87EB7 /* ChatMessageViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
