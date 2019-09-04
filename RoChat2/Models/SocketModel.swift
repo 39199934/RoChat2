@@ -26,11 +26,11 @@ protocol SocketModelDelegate {
 
 
 
-class SocketModel :GCDAsyncSocket{
+class SocketModel : NSObject{
     
     //static let ServerUserModel = UserModel.MakeServerUser()
     
-    
+    private var socket : GCDAsyncSocket
     let TAG = 801103
     let HEADSENDTAG = 324252
     let BODYSENDTAG = 897987
@@ -46,23 +46,16 @@ class SocketModel :GCDAsyncSocket{
     
     override init() {
         catchModel = MessageModelCatch()
+        socket = GCDAsyncSocket()
         
         super.init()
         catchModel.delegate = self
-        delegate = self
-        delegateQueue = DispatchQueue.global()
-        super.delegate = self
-        super.delegateQueue = DispatchQueue.global()
+        socket.delegate = self
+        socket.delegateQueue = DispatchQueue.global()
+        
         
     }
-    override init(delegate aDelegate: GCDAsyncSocketDelegate?, delegateQueue dq: DispatchQueue?, socketQueue sq: DispatchQueue?) {
-        catchModel = MessageModelCatch()
-        
-        super.init(delegate: aDelegate , delegateQueue:dq, socketQueue: sq)
-        catchModel.delegate = self
-        super.delegate = aDelegate
-        super.delegateQueue = dq
-    }
+   
 //    init(tagName: String) {
 //        self.socketTagName = tagName
 //        super.init()
@@ -100,16 +93,16 @@ class SocketModel :GCDAsyncSocket{
         return appDelegate.setting
     }()
     public func getConnectStatus() ->Bool{
-        return isConnected
+        return socket.isConnected
     }
     public func connectToHost(){
         do{
-            self.delegate = self
-            self.delegateQueue = DispatchQueue.global()
+            
             //print( self.delegate ?? "Nil delegate")
-            try connect(toHost: settingInfo.serverAddress, onPort: UInt16(settingInfo.port))
-            super.readData(withTimeout: -1, tag: TAG)
-            readData(withTimeout: -1, tag: TAG)
+            try socket.connect(toHost: settingInfo.serverAddress, onPort: UInt16(settingInfo.port))
+            socket.readData(withTimeout: -1, tag: TAG)
+            
+           
             
         }catch{
             print(error.localizedDescription)
@@ -122,12 +115,12 @@ class SocketModel :GCDAsyncSocket{
 //        super.delegateQueue = DispatchQueue.global()
 //    }
     public func disConnectToHost(){
-        disconnect()
+        socket.disconnect()
         
     }
     public func send(by data:Data){
         
-        write(data, withTimeout: -1, tag: TAG)
+        socket.write(data, withTimeout: -1, tag: TAG)
     //write
     }
     public func send(byMessageModel msg:MessageModel){
@@ -137,7 +130,7 @@ class SocketModel :GCDAsyncSocket{
         self.msg = msg
         msgHead = msg.head
         msgBody = msg.body
-        write(msg.headData!,withTimeout: -1,tag: HEADSENDTAG)
+        socket.write(msg.headData!,withTimeout: -1,tag: HEADSENDTAG)
     }
     
     
@@ -187,8 +180,8 @@ class SocketModel :GCDAsyncSocket{
 extension SocketModel:GCDAsyncSocketDelegate{
    
     func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
-        super.readData(withTimeout: -1, tag: TAG)
-        self.readData(withTimeout: -1, tag: TAG)
+//        socket.readData(withTimeout: -1, tag: TAG)
+        
         self.socketModelDelegate?.socketModel(self, didConnectToHost: host, port: port)
     }
     func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
@@ -198,44 +191,27 @@ extension SocketModel:GCDAsyncSocketDelegate{
     }
     func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
         
+        if ((tag == HEADSENDTAG || tag == BODYSENDTAG || tag == 0) && data.count == 1){
+            return
+        }
         catchModel.append(data: data)
-        //let msg = MessageModel.MakeMessageModel(byData: data)
-        //continue ......
-        //l//et client = searchClient(byRemoteMacAddress: msg.senderMac)
-        //client?.appendMessage(msg: msg)
-        //readdatalen
-//        if(messageBodyReadFinish){
-//            if(data.count == HEADSIZE){
-//                msg?.head = MessageHeadStruct(by: data)
-//                if msg?.head?.check == CHECKNUMBER
-//                {
-//                    messageBodyReadFinish = false
-//                    msg?.body = nil
-//                }else{
-//
-//                }
-//            }
-//
-//
-//        }else{
-//            self.recvData.append(data)
-//            if(UInt16(self.recvData.count) >= msgHead!.size){
-//                messageBodyReadFinish = true;
-//                msg?.body = MessageBodyModel.MakeMessageModel(byData: recvData)
-//                socketModelDelegate?.socketModel(self, messageModelReadyRead: msg!)
-//                recvData = Data()
-//            }
-//        }
+        socket.readData(withTimeout: -1, tag: tag)
+        
+       
     }
     func socket(_ sock: GCDAsyncSocket, didWriteDataWithTag tag: Int) {
         if (tag == HEADSENDTAG){
-            self.write(msg?.bodyData, withTimeout: -1, tag: BODYSENDTAG)
+            socket.write(msg?.bodyData, withTimeout: -1, tag: BODYSENDTAG)
+            
+            socket.readData(withTimeout: -1, tag: HEADSENDTAG)
         }
         if (tag == BODYSENDTAG){
             socketModelDelegate?.socket(self, messageModelWritten: msg!)
+            socket.readData(withTimeout: -1, tag: BODYSENDTAG)
         }
 //        super.readData(withTimeout: -1, tag: TAG)
 //        self.readData(withTimeout: -1, tag: TAG)
+//        socket.readData(withTimeout: -1, tag: BODYSENDTAG)
     }
     //socket
     

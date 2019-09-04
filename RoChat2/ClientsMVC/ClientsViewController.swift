@@ -63,26 +63,42 @@ class ClientsViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        refreshConnectStatus()
+        //refreshConnectStatus()
     }
     func refreshConnectStatus(){
         DispatchQueue.main.async {
             let isConnect = self.clientsModel!.isConnected
             if isConnect{
                 DispatchQueue.main.async {
-                    let str = " (\(self.clientsModel.clients.count))人"
+                    let str = " (\(self.clientsModel.clients.count)人)"
                     self.navigationItem.title = "信息" + str + ""
                 }
             }else{
                 DispatchQueue.main.async {
-                    let str = " (\(self.clientsModel.clients.count))人"
+                    let str = " (\(self.clientsModel.clients.count)人)"
                     self.navigationItem.title = "信息" + str + " [未连接]"
                 }
             }
             self.viewDidAppear(true)
         }
     }
-    
+//    func refreshConnectStatus(){
+//
+//            let isConnect = self.clientsModel!.isConnected
+//            if isConnect{
+//
+//                    let str = " (\(self.clientsModel.clients.count)人)"
+//                    self.navigationItem.title = "信息" + str + ""
+//
+//            }else{
+//
+//                    let str = " (\(self.clientsModel.clients.count)人)"
+//                    self.navigationItem.title = "信息" + str + " [未连接]"
+//
+//            }
+//            self.viewDidAppear(true)
+//
+//    }
     /*
     // MARK: - Navigation
 
@@ -114,19 +130,7 @@ extension ClientsViewController: ClientsModelDelegate{
     
     func clinetsLinkChanged(isConnected: Bool) {
         
-        if isConnected{
-            
-            let str = " (\(self.clientsModel.clients.count)人"
-            self.navigationItem.title = "信息" + str + ""
-            
-        }else{
-            
-            let str = "(\(self.clientsModel.clients.count)人"
-            self.navigationItem.title = "信息" + str + " [未连接]"
-            
-            
-        }
-        viewDidAppear(true)
+      refreshConnectStatus()
     
     }
     

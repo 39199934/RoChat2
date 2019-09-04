@@ -19,7 +19,7 @@ class SettingModel: Codable{
     init() {
        
         
-        self.port = 57239
+        self.port = 8080
         self.serverAddress =   "192.168.31.192" //"m2k5909168.zicp.vip" //
        
         

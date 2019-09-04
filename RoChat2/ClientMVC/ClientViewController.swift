@@ -35,22 +35,27 @@ class ClientViewController: UIViewController ,UITableViewDelegate,UITableViewDat
 //    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        //var emptyCell = UITableViewCell()
         
-        let cell: ClientSendCell
         
         let msg = clientModel?.messageDatabase[indexPath.row]
-        if msg!.isSender{
+        if !msg!.isSender{
+            let cell: ClientSendCell
             cell = tableView.dequeueReusableCell(withIdentifier: "IdChatCellSendForSend")! as! ClientSendCell
-            
+             cell.viewMsg(msg: (clientModel?.messageDatabase[indexPath.row])!)
+            return cell
             
         }else{
-            cell = tableView.dequeueReusableCell(withIdentifier: "IdChatCellSendForSend")! as! ClientSendCell
+            let cell: ClientRecvCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "IdChatCellSendForRecv")! as! ClientRecvCell
+             cell.viewMsg(msg: (clientModel?.messageDatabase[indexPath.row])!)
+            return cell
         }
-        cell.viewMsg(msg: (clientModel?.messageDatabase[indexPath.row])!)
+       
         
        
         
-        return cell
+       // return emptyCell
     }
     //return cell
     

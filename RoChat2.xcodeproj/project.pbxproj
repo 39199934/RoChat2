@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD499153232018BF0002FC44 /* ClientRecvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD499152232018BF0002FC44 /* ClientRecvCell.swift */; };
 		FD71491E2316C98200E87EB7 /* ChatMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */; };
 		FD71491F2316C98200E87EB7 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491C2316C98200E87EB7 /* ClientViewController.swift */; };
 		FD7149202316C98200E87EB7 /* ClientSendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491D2316C98200E87EB7 /* ClientSendCell.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD499152232018BF0002FC44 /* ClientRecvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRecvCell.swift; sourceTree = "<group>"; };
 		FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageViewCell.swift; sourceTree = "<group>"; };
 		FD71491C2316C98200E87EB7 /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		FD71491D2316C98200E87EB7 /* ClientSendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSendCell.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */,
 				FD71491D2316C98200E87EB7 /* ClientSendCell.swift */,
+				FD499152232018BF0002FC44 /* ClientRecvCell.swift */,
 				FD71491C2316C98200E87EB7 /* ClientViewController.swift */,
 				FDE73F3D230D423A00B352A3 /* ClientModel.swift */,
 			);
@@ -324,6 +327,7 @@
 				FDDD6425231020EB008BE66D /* SettingLocalUserCell.swift in Sources */,
 				FDE73F3C230D423400B352A3 /* MessageModel.swift in Sources */,
 				FDE73F46230D428100B352A3 /* SettingModel.swift in Sources */,
+				FD499153232018BF0002FC44 /* ClientRecvCell.swift in Sources */,
 				FDE73F24230D36F600B352A3 /* ViewController.swift in Sources */,
 				FD71492C231A599100E87EB7 /* IpPortSettingViewController.swift in Sources */,
 				FDDD642723103156008BE66D /* LocalUserViewController.swift in Sources */,

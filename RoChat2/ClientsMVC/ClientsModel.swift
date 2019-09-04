@@ -47,7 +47,7 @@ class ClientsModel:NSObject{
     }
     var isConnected:Bool {
         get{
-            return socketModel.isConnected
+            return socketModel.getConnectStatus()
         }
     }
     
