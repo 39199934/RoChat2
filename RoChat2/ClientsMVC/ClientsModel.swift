@@ -113,7 +113,7 @@ extension ClientsModel: SocketModelDelegate{
 //用于客户端的收发信息
 extension ClientsModel{
     func sendMessage(to client:ClientModel,by msg:String){
-        let msgBody = MessageBodyModel(from: appDelegate.setting.userInfo.getSendUserStruct(), to: client.remoteUser.getSendUserStruct(), byMessageContent: msg.data(using: MESSAGE_ENCODING) ?? Data(), useType: .message,useBak: "");
+        let msgBody = MessageBodyModel(from: appDelegate.setting.userInfo.getSendUserStruct(), to: client.remoteUser.getSendUserStruct(), byMessageContent: msg, useType: .message,useBak: "");
         print(msgBody.messageContent)
         let msgModel = MessageModel(byBody: msgBody)
         //client.messages.append(msgModel)

@@ -16,7 +16,7 @@ class SettingViewController: UIViewController {
     
     private  let CellTypeNumber: Int = 2
     var settingSegue: [Int: (title: String,id: String)] = [
-         0:("本地用记信息设置","IdSettingLocalUserCell"),
+         0:("本地用户信息设置","IdSettingLocalUserCell"),
         1:("地址端口设置","IdSettingSocketCell"),//: "IdSegueIpPort",
         2:("其他设置","IdSettingSocketCell")//: "IdSegueOther"
     ]

@@ -33,7 +33,7 @@ class ClientSendCell: UITableViewCell {
             //cMessageString.backgroundColor = UIColor.blue
             //cUserPhoto.backgroundColor = UIColor.red
             switch(msg.type){
-            case .message,.command,.link:
+            case .message,.command,.link,.error:
                 let msgStr = (msg.content as? String) ?? ""
                 //cMessageString.frame = CGRect(x: 50, y: 80, width: 60, height: 150)
                 //cMessageString.sizeToFit()

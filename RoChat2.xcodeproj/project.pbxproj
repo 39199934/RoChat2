@@ -10,6 +10,8 @@
 		FD71491E2316C98200E87EB7 /* ChatMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */; };
 		FD71491F2316C98200E87EB7 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491C2316C98200E87EB7 /* ClientViewController.swift */; };
 		FD7149202316C98200E87EB7 /* ClientSendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71491D2316C98200E87EB7 /* ClientSendCell.swift */; };
+		FD71492C231A599100E87EB7 /* IpPortSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD714928231A599100E87EB7 /* IpPortSettingViewController.swift */; };
+		FDBE82BE231E3C9C00BD9546 /* MessageCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE82BD231E3C9C00BD9546 /* MessageCatch.swift */; };
 		FDDD6417230FDD1C008BE66D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD6416230FDD1C008BE66D /* SettingViewController.swift */; };
 		FDDD6425231020EB008BE66D /* SettingLocalUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD6424231020EB008BE66D /* SettingLocalUserCell.swift */; };
 		FDDD642723103156008BE66D /* LocalUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDD642623103156008BE66D /* LocalUserViewController.swift */; };
@@ -58,6 +60,8 @@
 		FD71491B2316C98200E87EB7 /* ChatMessageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageViewCell.swift; sourceTree = "<group>"; };
 		FD71491C2316C98200E87EB7 /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		FD71491D2316C98200E87EB7 /* ClientSendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientSendCell.swift; sourceTree = "<group>"; };
+		FD714928231A599100E87EB7 /* IpPortSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpPortSettingViewController.swift; sourceTree = "<group>"; };
+		FDBE82BD231E3C9C00BD9546 /* MessageCatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCatch.swift; sourceTree = "<group>"; };
 		FDDD6416230FDD1C008BE66D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		FDDD6424231020EB008BE66D /* SettingLocalUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLocalUserCell.swift; sourceTree = "<group>"; };
 		FDDD642623103156008BE66D /* LocalUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				FDE73F3B230D423400B352A3 /* MessageModel.swift */,
+				FDBE82BD231E3C9C00BD9546 /* MessageCatch.swift */,
 			);
 			path = MessageModel;
 			sourceTree = "<group>";
@@ -109,6 +114,14 @@
 				FDE73F3D230D423A00B352A3 /* ClientModel.swift */,
 			);
 			path = ClientMVC;
+			sourceTree = "<group>";
+		};
+		FD71492D231A599900E87EB7 /* IpPortSetting */ = {
+			isa = PBXGroup;
+			children = (
+				FD714928231A599100E87EB7 /* IpPortSettingViewController.swift */,
+			);
+			path = IpPortSetting;
 			sourceTree = "<group>";
 		};
 		FDDD641F23101271008BE66D /* LocationUser */ = {
@@ -181,6 +194,7 @@
 				FDDD6424231020EB008BE66D /* SettingLocalUserCell.swift */,
 				FDE73F45230D428100B352A3 /* SettingModel.swift */,
 				FDDD6416230FDD1C008BE66D /* SettingViewController.swift */,
+				FD71492D231A599900E87EB7 /* IpPortSetting */,
 				FDDD641F23101271008BE66D /* LocationUser */,
 			);
 			path = SettingMVC;
@@ -311,9 +325,11 @@
 				FDE73F3C230D423400B352A3 /* MessageModel.swift in Sources */,
 				FDE73F46230D428100B352A3 /* SettingModel.swift in Sources */,
 				FDE73F24230D36F600B352A3 /* ViewController.swift in Sources */,
+				FD71492C231A599100E87EB7 /* IpPortSettingViewController.swift in Sources */,
 				FDDD642723103156008BE66D /* LocalUserViewController.swift in Sources */,
 				FDE73F38230D422000B352A3 /* SocketModel.swift in Sources */,
 				FDE73F56230E94D400B352A3 /* ClientsViewController.swift in Sources */,
+				FDBE82BE231E3C9C00BD9546 /* MessageCatch.swift in Sources */,
 				FDE73F40230D424100B352A3 /* CommandModel.swift in Sources */,
 				FDE73F3A230D422D00B352A3 /* UserModel.swift in Sources */,
 				FDE73F22230D36F600B352A3 /* AppDelegate.swift in Sources */,

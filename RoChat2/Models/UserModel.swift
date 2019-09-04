@@ -109,3 +109,11 @@ struct UserModel: Codable{
     }*/
     
 }
+
+extension UserModel{
+    
+    static var UserModelEmpty : UserModel{
+        let um = UserModel(name: "", type: .guest, photo: UIImage(), password: "")
+        return um;
+    }
+}

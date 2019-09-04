@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
-struct SettingModel: Codable{
+class SettingModel: Codable{
     
-    var port: UInt = 57239
-    var serverAddress: String = "m2k5909168.zicp.vip"
+    var port: UInt// = 57239
+    var serverAddress: String// = "m2k5909168.zicp.vip"
    
     
     var userInfo: UserModel
@@ -20,7 +20,7 @@ struct SettingModel: Codable{
        
         
         self.port = 57239
-        self.serverAddress =    "m2k5909168.zicp.vip" //"192.168.31.192"
+        self.serverAddress =   "192.168.31.192" //"m2k5909168.zicp.vip" //
        
         
         self.userInfo = UserModel.MakeLocalUser()

@@ -57,12 +57,12 @@ class ClientViewController: UIViewController ,UITableViewDelegate,UITableViewDat
   
 
     @IBAction func onSendMessageEditingDidEnd(_ sender: UITextField) {
-        if let msg = cSendMessage.text{
-            clientModel?.sendMessage(by: msg)
-            cSendMessage.text = ""
-            cChatMessageTable.reloadData()
-            
-        }
+//        if let msg = cSendMessage.text{
+//            clientModel?.sendMessage(by: msg)
+//            cSendMessage.text = ""
+//            cChatMessageTable.reloadData()
+        
+//        }
     }
     
     var clientModel: ClientModel?
